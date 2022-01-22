@@ -1,4 +1,4 @@
-!/usr/bin/env python3
+#!/usr/bin/env python3
 
 import os as os
 import sys as sys
@@ -174,7 +174,7 @@ def listener(**args):
         # have openshift listen for any travis ci builds
     if not args.run_travis:
         clone_bench_repo(args)
-        # travis will now be alerted by openshift and start build
+        # travis will now be alerted by openshift and trigger a build
     if not args.user:
         if args.production:
             args.user = "MontanaMendy"
