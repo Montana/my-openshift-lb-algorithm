@@ -1,2 +1,2 @@
-# openshift-vmware
-Retrieve information about virtual machines from a vCenter server or standalone ESX host with OpenShift
+# openshift-algorithm-for-montana
+My own algorithm for my own needs.
