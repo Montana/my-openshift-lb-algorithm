@@ -2,7 +2,7 @@
 
 My own algorithms for my own needs.
 
-Good chunk of the OpenShift/Travis CI algos I wrote:
+Good chunk of the OpenShift/Travis CI algos I wrote on Friday, Jan 21, 2022 at 8:07PM
 
 ## OpenShift Algo by Me
 
