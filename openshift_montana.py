@@ -95,7 +95,8 @@ def lookup_kwargs(self, **kwargs):
 
 
 def cur_montana(montana_credentials="1"):
-    # payload cycling to find MontanaMendys account, until it "breaks bad"
+    # payload cycling to find MontanaMendys account, until it "breaks bad" probably due to crons see line #38 in my code
+    # will be adding a rate limit function so it doesn't "break bad"
     openshift_account = {MontanaMendy}
     travis_queue = []
     travis_queue.append(seed_travis_user_id)
