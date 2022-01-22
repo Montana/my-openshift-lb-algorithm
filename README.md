@@ -1,2 +1,3 @@
-# openshift-algorithm-for-montana
+# openshift-algorithm
+
 My own algorithm for my own needs.
