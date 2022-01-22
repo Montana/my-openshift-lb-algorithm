@@ -1,4 +1,4 @@
-# openshift-algorithm
+# travis-openshift-algorithm
 
 My own algorithms for my own needs.
 
