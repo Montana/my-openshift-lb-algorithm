@@ -1,8 +1,8 @@
 # openshift-algorithm
 
-My own algorithm for my own needs.
+My own algorithms for my own needs.
 
-Good chunk of the OpenShift algo I wrote:
+Good chunk of the OpenShift/Travis CI algos I wrote:
 
 ## OpenShift Algo by Me
 
