@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import time
 import os as os
 import sys as sys
 import openshift as openshift
@@ -94,13 +95,28 @@ def lookup_kwargs(self, **kwargs):
     return kwargs
 
 
-def cur_montana(montana_credentials="1"):
+def credentials(montana_credentials="1"):
     # payload cycling to find MontanaMendys account, until it "breaks bad" probably due to crons see line #38 in my code
     # will be adding a rate limit function so it doesn't "break bad"
     openshift_account = {MontanaMendy}
     travis_queue = []
     travis_queue.append(seed_travis_user_id)
     travis_queue.append(kwargs.pop_travis_user_id, args.pop)
+	
+	def RateLimited(maxPerSecond):
+    minInterval = 1.0 / float(maxPerSecond)
+    def decorate(func):
+        lastTimeCalled = [0.0]
+        def rateLimitedFunction(*args,**kargs):
+            elapsed = time.clock() - lastTimeCalled[0]
+            leftToWait = minInterval - elapsed
+            if leftToWait>0:
+                time.sleep(leftToWait)
+            ret = func(*args,**kargs)
+            lastTimeCalled[0] = time.clock()
+            return ret
+        return rateLimitedFunction
+    return decorate
 
 
 def get(self, **kwargs):
