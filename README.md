@@ -4,6 +4,8 @@ My own algorithm for my own needs.
 
 Good chunk of the OpenShift algo I wrote:
 
+## OpenShift Algo by Me
+
 ```python
 # openshift queue algorithm 
 while openshift_queue:
@@ -35,3 +37,41 @@ while openshift_queue:
           # block incoming json if file is .yml, this will activate a load balancer if not done correctly, that costs money
             cur_id -= 1
 ```
+
+## Travis CI Queue Algo by me 
+
+```python
+# travis queue algorithm 
+while travis_queue:
+    target, task, interval, cur_id = self.task_q[0]
+    self.notify.wait(max(target - time.time(), 0))
+    if self.stopping:
+        return
+        # look out for heaps 
+    self.notify.clear()
+    target, task, interval, cur_id = heap.heappop(self.task_q)
+    if cur_id in self.removed_ids:
+        self.removed_ids.remove(cur_id)
+        continue
+    done = task()
+    if not done:
+        heapq.heappush(
+        self.task_q, (target + interval, task, interval, cur_id))
+     cur_id = self._next_id
+        cur_batch_size = min(n_samples, len(self) - self._next_id)
+        assert cur_batch_size > 0
+        # get the range 
+        for x in range(0, squares):
+			self.button_states[int(math.floor(x / 8))][x % 8] = 1
+                if self.parent.active_page == 2:
+			for x in range(0, 8):
+				for y in range(0, 8):
+					lp.LedCtrlRaw(button_defs.row[x][y], 0, 3*self.button_states[x][y])
+         # look for build batches going out, this will keep checking (looping via the cron i setup earlier)
+        self._next_id += cur_batch_size 
+        result = {}
+        for key in self.data_map:
+            result[key] = self.data_map[key][cur_id: cur_id + cur_batch_size]
+            assert len(result[key] == cur_batch_size)
+        return cur_batch_size, result
+   ```
